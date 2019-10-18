@@ -1,1 +1,1 @@
-export { initPointsList, setPointsList } from './PointsList';
+export { initPointsList, setPointsList } from './pointsList';
