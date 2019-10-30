@@ -6,12 +6,6 @@
   grid-row-gap: 1em;
 }
 
-.PointsItem {
-  background-color: whitesmoke;
-  padding: 15px;
-  box-shadow: 0 0 3px #eeeeee;
-}
-
 @media all and (max-width: 992px) {
   .Wrapper {
     grid-template-columns: 1fr;

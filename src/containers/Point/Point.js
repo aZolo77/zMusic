@@ -1,9 +1,14 @@
 import React from 'react';
+import Showcase from './Showcase/Showcase';
+import Description from './Description/Description';
 
-const Point = () => {
+import classes from './Point.module.scss';
+
+const Point = ({ id, name, desc }) => {
   return (
-    <div>
-      <p>Point</p>
+    <div className={classes.PointsItem}>
+      <Showcase name={name} pointsId={id} />
+      <Description description={desc} />
     </div>
   );
 };

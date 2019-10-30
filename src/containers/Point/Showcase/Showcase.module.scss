@@ -1,0 +1,59 @@
+@import '../../../assets/styles/utils/vars.scss';
+
+.Wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
+  padding: 15px;
+  border-right: 1px solid $neutral-light;
+  background: linear-gradient(
+    to bottom,
+    $light-wooden-color 0%,
+    $light-color 49%,
+    $light-color 51%
+  );
+}
+
+.Name {
+  border: 1px solid $medium-wooden-color;
+  border-radius: 0.2rem;
+  font-family: $heading-font;
+  font-weight: 700;
+  text-align: center;
+  color: $medium-wooden-color;
+  cursor: default;
+}
+
+.Image {
+  margin: 0 auto;
+  box-shadow: 0 0 3px $dark-wooden-shadow;
+}
+
+.Button {
+  color: $accent-color;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid $accent-color;
+  background-color: $light-color;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.Button:hover {
+  color: $light-color;
+  background-color: $accent-color;
+  border-color: $accent-color;
+}
+
+@media all and (max-width: 768px) {
+  .Wrapper {
+    border-right: none;
+    border-bottom: 1px solid $neutral-light;
+  }
+}

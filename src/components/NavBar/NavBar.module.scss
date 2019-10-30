@@ -1,6 +1,8 @@
+@import '../../assets/styles/utils/vars.scss';
+
 .List {
   margin-top: 1em;
-  background-color: #555555;
+  background-color: $dark-wooden-color;
   padding: 1em;
   display: grid;
   column-gap: 1em;

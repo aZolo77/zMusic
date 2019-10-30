@@ -10,6 +10,7 @@ const NavBar = () => {
       <nav className={classes.List}>
         <NavBarItem link="/">Home</NavBarItem>
         <NavBarItem link="/rehearsal-points">Rehearsal Points</NavBarItem>
+        <NavBarItem link="/auth">Auth</NavBarItem>
       </nav>
     </Container>
   );

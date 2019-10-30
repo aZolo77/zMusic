@@ -13,7 +13,8 @@ import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import './assets/styles/index.scss';
+// import './index.css';
 
 const composeEnhancers =
   process.env.NODE_ENV === 'development'
