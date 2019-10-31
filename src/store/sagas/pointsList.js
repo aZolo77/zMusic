@@ -1,5 +1,4 @@
 import { put, delay } from 'redux-saga/effects';
-// import { put } from 'redux-saga/effects';
 import * as actions from '../actions';
 
 const points = [
@@ -18,7 +17,7 @@ const points = [
 export function* setPointsList() {
   try {
     // * сюда приходит список с реп точками (axios)
-    yield delay(300); // имитация задержки сервера
+    yield delay(700); // имитация задержки сервера
 
     yield put(actions.setPointsList(points));
   } catch (error) {

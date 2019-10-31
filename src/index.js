@@ -6,7 +6,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import pointsListReducer from './store/reducers/pointsList';
-import { watchPointsList } from './store/sagas';
+import { watchPointsList, watchDetailedPoint } from './store/sagas';
 
 import App from './containers/App';
 
@@ -33,6 +33,7 @@ const store = createStore(
 );
 
 sagaMiddleware.run(watchPointsList);
+sagaMiddleware.run(watchDetailedPoint);
 
 const app = (
   <Provider store={store}>

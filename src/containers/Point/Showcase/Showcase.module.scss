@@ -8,19 +8,19 @@
   border-right: 1px solid $neutral-light;
   background: linear-gradient(
     to bottom,
-    $light-wooden-color 0%,
+    $dark-wooden-color 0%,
     $light-color 49%,
     $light-color 51%
   );
 }
 
 .Name {
-  border: 1px solid $medium-wooden-color;
+  border: 1px solid $light-color;
   border-radius: 0.2rem;
-  font-family: $heading-font;
-  font-weight: 700;
+  padding: 2px 0 1px;
   text-align: center;
-  color: $medium-wooden-color;
+  text-shadow: 0 0 2px $light-color;
+  color: $light-color;
   cursor: default;
 }
 
@@ -31,7 +31,7 @@
 
 .Button {
   color: $accent-color;
-  padding: 0.25rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   border: 1px solid $accent-color;
   background-color: $light-color;
   font-size: 0.875rem;

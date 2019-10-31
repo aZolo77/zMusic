@@ -1,11 +1,17 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 import classes from './Showcase.module.scss';
 
 const Showcase = ({ name, src = 'https://picsum.photos/120', pointsId }) => {
+  const history = useHistory();
+
   const showPointsPageHandler = () => {
-    console.log('Show Points page by ID: ', pointsId);
+    // ? Переход на страницу Репетиционной Студии
+    history.push({
+      pathname: `/rehearsal-points/point/${pointsId}`
+    });
   };
 
   return (

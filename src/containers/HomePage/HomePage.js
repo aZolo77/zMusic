@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Heading from '../../components/UI/Heading/Heading';
 
 const HomePage = () => {
   return (
     <Container>
-      <p>Home Page</p>
+      <Heading>Home Page</Heading>
     </Container>
   );
 };
