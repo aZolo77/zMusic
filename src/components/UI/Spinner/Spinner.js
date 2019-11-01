@@ -1,12 +1,13 @@
 import React from 'react';
+// import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 import Loader from 'react-bootstrap/Spinner';
 
-import classes from './Spinner.module.scss';
+import './Spinner.scss';
 
 const Spinner = () => {
   return (
-    <div className={classes.Wrapper}>
-      <Loader animation="grow" variant="info" />
+    <div className="spinnerWrapper">
+      <Loader animation="grow" variant="spinnerColor" />
     </div>
   );
 };

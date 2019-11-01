@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import pointsListReducer from './store/reducers/pointsList';
+import detailedPointReducer from './store/reducers/detailedPoint';
 import { watchPointsList, watchDetailedPoint } from './store/sagas';
 
 import App from './containers/App';
@@ -14,7 +15,6 @@ import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/index.scss';
-// import './index.css';
 
 const composeEnhancers =
   process.env.NODE_ENV === 'development'
@@ -22,7 +22,8 @@ const composeEnhancers =
     : null || compose;
 
 const rootReducer = combineReducers({
-  pointsList: pointsListReducer
+  pointsList: pointsListReducer,
+  detailedPoint: detailedPointReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();

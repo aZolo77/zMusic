@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PointDescription from '../../../components/PointChunks/PointDescription/PointDescription';
+import PointHours from '../../../components/PointChunks/PointHours/PointHours';
+import PointPrices from '../../../components/PointChunks/PointPrices/PointPrices';
 import Tabs from './Tabs/Tabs';
 
 import classes from './Description.module.scss';
@@ -22,17 +24,17 @@ const Description = ({
 
   switch (state.content) {
     case 'general':
-      content = <PointDescription>{description}</PointDescription>;
+      content = <PointDescription description={description} />;
       break;
     case 'prices':
-      content = <p>{prices}</p>;
+      content = <PointPrices prices={prices} />;
       break;
     case 'hours':
-      content = <p>{workingHours}</p>;
+      content = <PointHours workingHours={workingHours} />;
       break;
 
     default:
-      content = <p>{description}</p>;
+      content = null;
       break;
   }
 

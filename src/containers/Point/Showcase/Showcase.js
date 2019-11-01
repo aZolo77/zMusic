@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import classes from './Showcase.module.scss';
 
-const Showcase = ({ name, src = 'https://picsum.photos/120', pointsId }) => {
+const Showcase = ({ name, src = 'https://picsum.photos/125', pointsId }) => {
   const history = useHistory();
 
   const showPointsPageHandler = () => {
@@ -20,7 +20,7 @@ const Showcase = ({ name, src = 'https://picsum.photos/120', pointsId }) => {
       <Image className={classes.Image} src={src} rounded />
 
       <button className={classes.Button} onClick={showPointsPageHandler}>
-        Подронее
+        Подробнее
       </button>
     </div>
   );

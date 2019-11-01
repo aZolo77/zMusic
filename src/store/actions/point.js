@@ -1,8 +1,15 @@
 import * as actions from './actionTypes';
 
-export const getPoint = id => ({
-  type: actions.GET_POINT,
+export const initPoint = id => ({
+  type: actions.INIT_POINT,
   payload: {
     id
+  }
+});
+
+export const getPoint = pointInfo => ({
+  type: actions.GET_POINT,
+  payload: {
+    pointInfo
   }
 });

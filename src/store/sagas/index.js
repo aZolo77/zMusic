@@ -2,7 +2,7 @@ import { takeEvery } from 'redux-saga/effects';
 import * as actions from '../actions/actionTypes';
 
 import { setPointsList } from './pointsList';
-import { getDetailedPoint } from './detailedPoints';
+import { getDetailedPoint } from './detailedPoint';
 
 // * watchers
 export function* watchPointsList() {
@@ -10,5 +10,5 @@ export function* watchPointsList() {
 }
 
 export function* watchDetailedPoint() {
-  yield takeEvery(actions.GET_POINT, getDetailedPoint);
+  yield takeEvery(actions.INIT_POINT, getDetailedPoint);
 }

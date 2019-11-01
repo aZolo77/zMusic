@@ -1,8 +1,11 @@
+@import '../../../../assets/styles/utils/vars.scss';
+
 .Wrapper {
   padding: 15px;
 }
 
 .Button {
+  background-color: $accent-color;
   cursor: pointer;
 }
 

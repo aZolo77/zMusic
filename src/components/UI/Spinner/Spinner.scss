@@ -1,0 +1,11 @@
+@import '../../../assets/styles/utils/vars.scss';
+
+.spinnerWrapper {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-spinnerColor.spinner-grow {
+  background-color: $accent-color;
+}
