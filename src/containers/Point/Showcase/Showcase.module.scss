@@ -3,6 +3,7 @@
 .Wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
   grid-row-gap: 1em;
   padding: 15px;
   border-right: 1px solid $neutral-light;
@@ -14,38 +15,49 @@
   );
 }
 
+.NameWrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
 .Name {
+  display: block;
+  width: 100%;
   border: 1px solid $light-color;
-  border-radius: 0.2rem;
-  padding: 2px 0 1px;
-  text-align: center;
+  padding: 0.2em;
   text-shadow: 0 0 2px $light-color;
   color: $light-color;
+  border-radius: 0.2rem;
+  text-align: center;
   cursor: default;
 }
 
 .Image {
   margin: 0 auto;
   box-shadow: 0 0 3px $dark-wooden-shadow;
+  max-height: 100px;
+}
+
+.ButtonWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .Button {
+  width: 100%;
   color: $accent-color;
-  padding: 0.1rem 0.5rem;
+  padding: 0.2em 0.3em;
   border: 1px solid $accent-color;
+  text-align: center;
   background-color: $light-color;
-  font-size: 0.875rem;
-  line-height: 1.5;
   border-radius: 0.2rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.Button:focus {
-  outline: none;
+  transition: 0.2s;
 }
 
 .Button:hover {
+  cursor: pointer;
   color: $light-color;
   background-color: $accent-color;
   border-color: $accent-color;

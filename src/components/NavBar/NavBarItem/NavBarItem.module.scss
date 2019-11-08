@@ -1,14 +1,24 @@
 @import '../../../assets/styles/utils/vars.scss';
 
 .Item {
-  background-color: $light-color;
-  padding: 10px 15px;
+  padding: 0 1em;
+}
+
+.Item:not(:last-child) {
+  border-right: 1px solid $light-color;
+}
+
+.Item:last-child {
+  padding-right: 0;
 }
 
 .Item a {
-  color: $dark-wooden-color;
+  color: $light-color;
 }
 
 .Item a:hover {
   color: $accent-color;
+}
+
+@media all and (max-width: 768px) {
 }

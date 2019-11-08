@@ -1,10 +1,11 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+// import Carousel from '../../../components/Carousel/Carousel';
 
 import classes from './Showcase.module.scss';
 
-const Showcase = ({ name, src = 'https://picsum.photos/125', pointsId }) => {
+const Showcase = ({ name, imgs, pointsId }) => {
   const history = useHistory();
 
   const showPointsPageHandler = () => {
@@ -16,12 +17,15 @@ const Showcase = ({ name, src = 'https://picsum.photos/125', pointsId }) => {
 
   return (
     <div className={classes.Wrapper}>
-      <div className={classes.Name}>{name}</div>
-      <Image className={classes.Image} src={src} rounded />
+      <div className={classes.NameWrapper}>
+        <span className={classes.Name}>{name}</span>
+      </div>
 
-      <button className={classes.Button} onClick={showPointsPageHandler}>
-        Подробнее
-      </button>
+      <Image src={imgs[0].src} className={classes.Image} />
+
+      <div className={classes.ButtonWrapper} onClick={showPointsPageHandler}>
+        <div className={classes.Button}>Подробнее</div>
+      </div>
     </div>
   );
 };

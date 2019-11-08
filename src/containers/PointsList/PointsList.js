@@ -26,8 +26,10 @@ const PointsList = () => {
   }));
 
   const renderPointsList = () => {
-    return points.map(({ id, name, description }) => {
-      return <Point key={id} id={id} name={name} desc={description} />;
+    return points.map(({ id, name, description, imgs }) => {
+      return (
+        <Point key={id} id={id} name={name} desc={description} imgs={imgs} />
+      );
     });
   };
 

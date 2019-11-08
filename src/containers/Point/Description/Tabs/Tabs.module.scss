@@ -1,14 +1,41 @@
 @import '../../../../assets/styles/utils/vars.scss';
 
 .Wrapper {
-  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1em;
 }
 
 .Button {
-  background-color: $accent-color;
+  text-align: center;
+  position: relative;
+  padding: 0.2em 0.5em;
+  border: 1px solid $light-wooden-color;
+  color: $accent-color;
   cursor: pointer;
 }
 
-.ButtonText {
-  padding: 0.25rem 0.5rem;
+.Button:first-child {
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.Button:last-child {
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.SimpleButton {
+  background-color: $light-color;
+  transition: 0.3s;
+}
+
+.SimpleButton:hover {
+  background-color: $light-wooden-color;
+  color: $light-color;
+}
+
+.ActiveButton {
+  background-color: $accent-color;
+  color: $light-color;
 }

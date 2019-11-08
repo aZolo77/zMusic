@@ -1,0 +1,15 @@
+@import '../../../assets/styles/utils/vars.scss';
+
+.Item {
+  padding: 5px 1em;
+  background-color: $medium-wooden-color;
+  color: $light-color;
+}
+
+.Item a {
+  color: $light-color;
+}
+
+.Item a:hover {
+  color: $accent-color;
+}
